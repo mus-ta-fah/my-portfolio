@@ -26,11 +26,11 @@ export const metadata: Metadata = {
   title: "Moustapha Mbaye — Développeur Fullstack · Dakar",
   description:
     "Développeur fullstack web & mobile basé à Dakar. Sites vitrines professionnels pour PME françaises. Next.js, FastAPI, React Native.",
-  metadataBase: new URL("https://mustafah.dev"),
+  metadataBase: new URL("https://www.mustafah.dev"),
   openGraph: {
     title: "Moustapha Mbaye — Développeur Fullstack",
     description: "Je construis depuis Dakar ce que les agences parisiennes facturent 3x plus cher.",
-    url: "https://mustafah.dev",
+    url: "https://www.mustafah.dev",
     siteName: "mustafah.dev",
     locale: "fr_FR",
     type: "website",
