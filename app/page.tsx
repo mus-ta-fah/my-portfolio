@@ -13,9 +13,9 @@ export default function Home() {
       <About />
       <Services />
       <Projects />
-      <Process />
+      {/* <Process />
       <CTA />
-      <Footer />
+      <Footer /> */}
     </main>
   );
 }

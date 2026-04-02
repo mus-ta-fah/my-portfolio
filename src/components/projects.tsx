@@ -10,7 +10,7 @@ const projects = [
     location: "🇫🇷 Lyon, Bordeaux, France",
     desc: "Prospection B2B + création de sites vitrines professionnels pour hôtels indépendants français. Réservation directe intégrée, SEO technique. 194 prospects identifiés, pipeline actif.",
     stack: "Next.js · Tailwind CSS · Framer · Google Maps API · Anthropic API",
-    href: "https://hotel-vitrine-kyriad-demo.netlify.app",
+    href: "https://hotel-kyriad.netlify.app",
   },
   {
     tags: [{ label: "IoT · Govathon 2025", highlight: true }, { label: "ESP8266" }, { label: "Next.js" }],
@@ -18,7 +18,7 @@ const projects = [
     location: "🇸🇳 Dakar, Sénégal",
     desc: "Poubelle biomédicale connectée pour améliorer la gestion des déchets hospitaliers. Capteurs IoT, dashboard temps réel, auth sécurisée. Présenté à Govathon 2025.",
     stack: "ESP8266 · Next.js 15 · Prisma · Neon PostgreSQL · Better Auth · Vercel",
-    href: "#",
+    href: "https://kaaraange.vercel.app",
   },
   {
     tags: [{ label: "SaaS · Freemium", highlight: true }, { label: "FastAPI" }, { label: "Next.js" }],

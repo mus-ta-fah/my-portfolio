@@ -11,8 +11,8 @@ const fadeUp = (delay = 0) => ({
 
 const stats = [
   { num: "4+", label: "Ans d'expérience" },
-  { num: "5", label: "Projets actifs" },
-  { num: "10j", label: "Délai livraison" },
+  { num: "5+", label: "Produits construits" },
+  { num: "Full-stack", label: "Web · Mobile · IoT" },
 ];
 
 export default function Hero() {
@@ -33,7 +33,7 @@ export default function Hero() {
           className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.15em] uppercase text-accent mb-7"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-          Dakar, Sénégal 🇸🇳 · Disponible pour missions France
+          Dakar 🇸🇳 · Disponible pour missions France · Premiers clients en cours
         </motion.div>
 
         {/* Title */}
@@ -59,12 +59,12 @@ export default function Hero() {
           {...fadeUp(0.6)}
           className="text-lg font-light leading-relaxed text-muted max-w-xl mb-11"
         >
-          Je crée des <strong className="text-text font-medium">
-            produits numériques
+          Je construis des sites vitrines professionnels pour
+          hôtels et PME françaises, et des produits tech pour
+          l&apos;Afrique de l&apos;Ouest. <br />
+          <strong className="text-text font-medium">
+            Tarifs transparents, livraison en 10-15 jours, maquette gratuite.
           </strong>{" "}
-          pour l&apos;Afrique de l&apos;Ouest <br />
-          et des <strong className="text-text font-medium">sites vitrines
-          </strong>{" "}  pour des PME en France {" "}
         </motion.p>
 
         {/* Actions */}

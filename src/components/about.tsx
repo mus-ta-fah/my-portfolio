@@ -3,7 +3,7 @@
 import { motion, Transition } from "framer-motion";
 
 const stack = [
-  "Next.js 15", "TypeScript", "FastAPI", "React Native",
+  "Next.js", "TypeScript", "FastAPI", "React Native",
   "PostgreSQL", "Tailwind CSS", "Docker", "Vercel",
   "Prisma", "Redis", "Claude API", "ESP8266",
 ];
@@ -11,8 +11,8 @@ const stack = [
 const metrics = [
   { num: "10j", label: "Délai moyen" },
   { num: "-40%", label: "vs agences FR" },
-  { num: "M2", label: "Big Data" },
-  { num: "5", label: "Projets livrés" },
+  { num: "M2", label: "Data Science & Génie Logiciel" },
+  { num: "5", label: "Produits livrés" },
 ];
 
 const fadeUp = (delay = 0) => ({
@@ -39,18 +39,17 @@ export default function About() {
 
         <h2 className="font-display text-[clamp(32px,4vw,52px)] font-bold leading-tight tracking-tight mb-6">
           Dev fullstack.<br />
-          Basé à <em className="italic text-accent">Dakar</em>.<br />
-          Pour le monde.
+          Basé à <em className="italic text-accent">Dakar</em>
         </h2>
 
         <div className="space-y-5 text-base font-light leading-[1.85] text-muted">
           <p>
             Je m&apos;appelle Moustapha Mbaye. Depuis Dakar, je construis des
-            applications web, mobiles et IoT pour des clients en France et des
+            applications web, SaaS et des sites vitrines pour des clients en France et des
             projets qui répondent aux besoins réels de l&apos;Afrique de l&apos;Ouest.
           </p>
           <p>
-            Mon Master 2 en Big Data à l&apos;Université de Bambey forge ma rigueur
+            Mon Master 2 en Data Science & Génie Logiciel à l&apos;Université de Bambey forge ma rigueur
             technique. Ma pratique quotidienne sur des projets réels forge mes
             compétences.
           </p>
@@ -58,8 +57,8 @@ export default function About() {
             <strong className="text-text font-medium">
               Mon offre principale pour la France :
             </strong>{" "}
-            sites vitrines pour hôtels et PME, livrés en 10-15 jours à
-            1 500-2 500€ — soit 40% moins cher qu&apos;une agence locale.
+            sites vitrines performants pour hôtels et PME,
+            livrés rapidement avec une stack moderne et un SEO technique solide.
           </p>
         </div>
 
