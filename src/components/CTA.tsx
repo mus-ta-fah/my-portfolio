@@ -1,5 +1,6 @@
 "use client";
 
+import { ctaData } from "@/lib/data";
 import { motion, Transition } from "framer-motion";
 import Link from "next/link";
 
@@ -24,46 +25,69 @@ export default function CTA() {
           {...fadeUp(0)}
           className="flex items-center justify-center gap-3 text-[11px] font-semibold tracking-[0.2em] uppercase text-accent mb-6"
         >
-          Parlons-en
+          {ctaData.eyebrow}
         </motion.div>
 
         <motion.h2
           {...fadeUp(0.1)}
           className="font-display text-[clamp(40px,6vw,80px)] font-black leading-none tracking-tight max-w-2xl mx-auto mb-6"
         >
-          Prêt à lancer<br />
-          votre <em className="italic text-accent">vitrine</em> ?
+          {ctaData.title.line1}<br />
+          {ctaData.title.line2} <em className="italic text-accent">{ctaData.title.line2Accent}</em>
         </motion.h2>
 
-        <motion.p
-          {...fadeUp(0.2)}
-          className="text-lg font-light text-muted max-w-md mx-auto mb-12 leading-relaxed"
-        >
-          Hôtel sans site, site obsolète ou projet plus ambitieux — décrivez-moi
-          votre besoin en 2 lignes.
-        </motion.p>
+        <div className="grid md:grid-cols-2 text-left mt-12 ">
 
-        <motion.div
-          {...fadeUp(0.3)}
-          className="flex flex-wrap items-center justify-center gap-4"
-        >
-          <Link
-            href="mailto:hello@mustafah.dev"
-            className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-bg bg-accent px-8 py-4 rounded no-underline transition-all duration-200 hover:bg-[#f0d98a] hover:-translate-y-0.5"
-          >
-            Envoyer un email →
-          </Link>
-          <Link
-            href="https://linkedin.com/in/mustafah-mbaye"
-            target="_blank"
-            className="text-sm font-normal tracking-wide text-muted border-b border-border2 pb-0.5 no-underline transition-all hover:text-text hover:border-text2"
-          >
-            LinkedIn
-          </Link>
-        </motion.div>
+          {/* left */}
+
+          <motion.div {...fadeUp(0.4)} className="flex flex-col h-full">
+            <motion.p
+              {...fadeUp(0.2)}
+              className="text-lg font-light text-muted max-w-md mb-6 leading-relaxed"
+            >
+              {ctaData.subtitle.map((text, index) => (
+                <div key={index}>{text}</div>
+              ))}
+            </motion.p>
+            <div className="mt-12">
+              <Link
+                href={ctaData.cta.primary.href}
+                target="_blank"
+                className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-black bg-accent px-8 py-4 rounded no-underline transition-all duration-200 hover:bg-[#f0d98a] hover:-translate-y-0.5"
+              >
+                {ctaData.cta.primary.label}
+              </Link>
+            </div>
+          </motion.div>
+
+          {/* right */}
+          <div>
+            <motion.div
+              {...fadeUp(0.3)}
+              className="text-lg font-light text-muted max-w-md mb-12 leading-relaxed"
+            >
+              <span>{ctaData.audit.text}</span>
+              <div className="text-left mb-12">
+                <p>{ctaData.audit.details.text}</p>
+                <ul className="list-disc list-inside">
+                  {ctaData.audit.details.list.map((detail, index) => (
+                    <li key={index}>{detail}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <Link
+                href={ctaData.cta.secondary.href}
+                className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-accent border border-accent px-8 py-4 rounded no-underline transition-all duration-200 hover:bg-[#111] hover:-translate-y-0.5"
+              >
+                {ctaData.cta.secondary.label}
+              </Link>
+            </motion.div>
+          </div>
+        </div>
 
         <motion.a
-          {...fadeUp(0.4)}
+          {...fadeUp(0.5)}
           href="mailto:hello@mustafah.dev"
           className="inline-flex items-center gap-2 font-mono-custom text-sm text-muted mt-6 no-underline transition-colors hover:text-accent"
         >

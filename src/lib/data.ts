@@ -1,4 +1,4 @@
-// data/portfolio.ts
+import { AppWindow, House, LucideIcon, Smartphone } from 'lucide-react';
 
 export const siteConfig = {
     name: "Moustapha Mbaye",
@@ -7,7 +7,7 @@ export const siteConfig = {
     domain: "mustafah.dev",
     location: "Dakar, Sénégal",
     flag: "🇸🇳",
-    github: "https://github.com/mustafahmbaye",
+    github: "https://github.com/mustafah",
     linkedin: "https://linkedin.com/in/mustafah-mbaye",
     status: "Disponible · Premiers clients en cours",
 } as const;
@@ -32,18 +32,23 @@ export const navData = {
 // HERO
 // ─────────────────────────────────────────────────────────────
 
+
+
 export const heroData = {
-    tag: "Dakar, Sénégal 🇸🇳 · Disponible · Premiers clients en cours",
+    tag: "Dakar 🇸🇳 · Disponible pour missions France · Premiers clients en cours",
     title: {
         line1: "Moustapha",
         line2: "Mbaye.",       // italic + accent color
         line3: "Développeur.", // outline stroke
     },
-    subtitle:
-        "Je construis des sites vitrines professionnels pour hôtels et PME françaises, et des produits tech pour l'Afrique de l'Ouest. Tarifs transparents, livraison en 10-15 jours, maquette gratuite.",
+    subtitle: {
+        text: "Je crée des sites rapides, modernes et optimisés pour le mobile pour les PME et hôtels français qui veulent plus de visibilité et plus de réservations directes.",
+        span: "Livraison en 10-15 jours, sans les tarifs d’une agence à 10 000€."
+    },
+
     cta: {
-        primary: { label: "Voir mes projets →", href: "#projects" },
-        secondary: { label: "Demander une maquette", href: "#contact" },
+        primary: { label: "Recevoir un mini audit gratuit →", href: "#contact" },
+        secondary: { label: "Voir mes projets", href: "#projects" },
     },
     stats: [
         { num: "4+", label: "Ans de pratique" },
@@ -59,16 +64,38 @@ export const heroData = {
 export const aboutData = {
     eyebrow: "À propos",
     title: {
-        line1: "Dev fullstack.",
-        line2: "Basé à",
-        line2Accent: "Dakar.",
-        line3: "Pour le monde.",
+        line1: "Un développeur",
+        line2Accent: "qui pense comme un entrepreneur.",
     },
     paragraphs: [
-        "Je m'appelle Moustapha Mbaye. Depuis Dakar, je construis des applications web, mobiles et IoT pour des clients en France et des projets qui répondent aux besoins réels de l'Afrique de l'Ouest.",
-        "Mon Master 2 en Big Data à l'Université de Bambey forge ma rigueur technique. Ma pratique quotidienne sur des projets réels — scrapers, SaaS, IoT, marketplaces — forge mes compétences.",
-        "Mon offre principale pour la France : sites vitrines pour hôtels et PME, livrés en 10-15 jours à 1 500-2 500€. Soit 40% moins cher qu'une agence locale, pour un résultat identique.",
+        "Je suis Moustapha Mbaye, développeur fullstack. Depuis Dakar, je conçois des sites vitrines et applications web pour des entreprises & particuliers qui veulent une présence en ligne moderne et efficace.",
+        // "Mon Master 2 Data Science & Génie Logiciel à l'Université de Bambey forge ma rigueur technique. Ma pratique quotidienne sur des projets réels — scrapers, SaaS, IoT, marketplaces — forge mes compétences.",
     ],
+    offrefr:{
+        text: "Mon offre principale pour la France :",
+        description: "sites vitrines pour hôtels et PME, livrés en 10-15 jours avec une stack moderne et un SEO technique solide."
+    },
+    problemes: {
+        text: "Beaucoup de PME ont encore aujourd’hui :",
+        list: [
+            "un site lent, un SEO faible",
+            "un design daté et non responsive",
+            "une mauvaise expérience mobile",
+        ],
+        resultat: "Résultat : des visiteurs… mais peu de clients."
+    },
+    objectif: {
+        text: "Mon objectif est simple :",
+        description: "transformer votre site en un outil qui inspire confiance et génère des prospects.",
+        methode: {
+            text: "Pour cela je combine",
+            list: [
+                "design moderne",
+                "performance technique",
+                "expérience utilisateur claire",
+            ]
+        }
+    },
     card: {
         badge: "🇸🇳 Dakar, Sénégal",
         title: "La meilleure tech n'a pas de frontières.",
@@ -77,23 +104,22 @@ export const aboutData = {
         metrics: [
             { num: "10j", label: "Délai moyen" },
             { num: "-40%", label: "vs agences FR" },
-            { num: "M2", label: "Big Data" },
-            { num: "5", label: "Projets construits" },
+            { num: "M2", label: "Data Science & Génie Logiciel Data" },
+            { num: "5+", label: "Projets construits" },
         ],
     },
     stack: [
-        "Next.js 15",
+        "React.js",
+        "Next.js",
         "TypeScript",
-        "FastAPI",
+        "Tailwind CSS",
         "React Native",
+        "FastAPI",
         "PostgreSQL",
-        "Tailwind CSS v4",
+        "Redis",
+        "Prisma",
         "Docker",
         "Vercel",
-        "Prisma",
-        "Redis",
-        "Claude API",
-        "ESP8266",
     ],
 } as const;
 
@@ -103,7 +129,7 @@ export const aboutData = {
 
 export type Service = {
     num: string;
-    icon: string;
+    icon: LucideIcon;
     name: string;
     desc: string;
     price: string;
@@ -125,7 +151,7 @@ export const servicesData: {
     items: [
         {
             num: "01",
-            icon: "🏨",
+            icon: House,
             name: "Site Vitrine",
             desc: "Site professionnel pour hôtels et PME françaises. Réservation directe intégrée, SEO technique, responsive mobile. Réduit vos commissions Booking dès le premier mois.",
             price: "1 500€",
@@ -141,22 +167,22 @@ export const servicesData: {
         },
         {
             num: "02",
-            icon: "⚡",
+            icon: AppWindow,
             name: "Application Web",
             desc: "SaaS, dashboards, outils internes. Stack moderne Next.js 15 + FastAPI + PostgreSQL. Architecture pensée pour scaler dès le départ.",
             price: "Sur devis",
             priceSuffix: "",
             highlight: false,
             features: [
-                "Next.js 15 + FastAPI",
+                "Next.js + FastAPI",
                 "Auth, dashboard, API REST",
-                "Déploiement Vercel + Railway",
+                "Déploiement Vercel + Railway/Render",
                 "Tests & CI/CD inclus",
             ],
         },
         {
             num: "03",
-            icon: "📱",
+            icon: Smartphone,
             name: "Application Mobile",
             desc: "Apps iOS & Android avec React Native. Un seul codebase, deux plateformes. Intégration Mobile Money, WhatsApp et paiements africains maîtrisés.",
             price: "Sur devis",
@@ -315,20 +341,20 @@ export const processData: {
     steps: [
         {
             num: "01",
-            title: "Découverte",
-            desc: "Call de 20 min pour comprendre votre établissement, vos clients et ce que vous voulez que le site fasse pour vous.",
+            title: "Discussion rapide",
+            desc: "Nous échangeons sur votre activité et vos objectifs pour comprendre votre établissement, vos clients et ce que vous voulez que le site fasse pour vous.",
             days: "Jour 1",
         },
         {
             num: "02",
             title: "Maquette gratuite",
-            desc: "Je prépare une maquette complète de votre site avant tout engagement. Vous validez, vous ajustez — puis on signe.",
+            desc: "Je prépare une première version visuelle de votre site avant tout engagement. Vous validez, vous ajustez — puis on signe.",
             days: "Jour 2-3",
         },
         {
             num: "03",
             title: "Développement",
-            desc: "Développement sur la base validée. Vous suivez l'avancement en temps réel via un lien de preview Vercel mis à jour chaque jour.",
+            desc: "Développement sur la base validée. Vous suivez l'avancement en temps réel via un lien de preview mis à jour chaque jour.",
             days: "Jour 4-12",
         },
         {
@@ -352,12 +378,27 @@ export const ctaData = {
         line2: "votre",
         line2Accent: "vitrine ?",
     },
-    subtitle:
-        "Hôtel sans site, site obsolète ou projet plus ambitieux — décrivez-moi votre besoin en 2 lignes. Je réponds sous 24h avec une première maquette.",
+    subtitle:[
+         "Si vous a besoin d’un site moderne, rapide et crédible ou que vous avez un projet plus ambitieux",
+         "décrivez-moi votre besoin en 2 lignes.",
+         "Je réponds sous 24h avec une première maquette."
+    ],
+        // "",
     availability: "Disponible · Répond sous 24h",
+    audit: {
+        text: "Je peux aussi vous envoyer un mini audit gratuit de votre site actuel.",
+        details : {
+            text: "Dans cet audit je vous montre :",
+            list : [
+                "les points faibles de votre site",
+                "ce qui peut être amélioré",
+                "comment augmenter vos conversions"
+            ]
+        }
+    },
     cta: {
-        primary: { label: "Envoyer un email →", href: "mailto:hello@mustafah.dev" },
-        secondary: { label: "LinkedIn", href: "https://linkedin.com/in/mustafah-mbaye" },
+        primary: { label: "Me parler de votre projet →", href: "mailto:hello@mustafah.dev" },
+        secondary: { label: "Recevoir mon audit gratuit →", href: "mailto:hello@mustafah.dev" },
     },
     email: "hello@mustafah.dev",
     reassurance: [

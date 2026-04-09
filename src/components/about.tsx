@@ -1,19 +1,7 @@
 "use client";
 
+import { aboutData } from "@/lib/data";
 import { motion, Transition } from "framer-motion";
-
-const stack = [
-  "Next.js", "TypeScript", "FastAPI", "React Native",
-  "PostgreSQL", "Tailwind CSS", "Docker", "Vercel",
-  "Prisma", "Redis", "Claude API", "ESP8266",
-];
-
-const metrics = [
-  { num: "10j", label: "Délai moyen" },
-  { num: "-40%", label: "vs agences FR" },
-  { num: "M2", label: "Data Science & Génie Logiciel" },
-  { num: "5", label: "Produits livrés" },
-];
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 32 },
@@ -34,37 +22,38 @@ export default function About() {
       <motion.div {...fadeUp(0)}>
         <div className="flex items-center gap-3 text-[11px] font-semibold tracking-[0.2em] uppercase text-accent mb-4">
           <span className="w-7 h-px bg-accent" />
-          À propos
+          {aboutData.eyebrow}
         </div>
 
         <h2 className="font-display text-[clamp(32px,4vw,52px)] font-bold leading-tight tracking-tight mb-6">
-          Dev fullstack.<br />
-          Basé à <em className="italic text-accent">Dakar</em>
+          {aboutData.title.line1}<br />
+          <em className="italic text-accent">{aboutData.title.line2Accent}</em><br />
         </h2>
 
         <div className="space-y-5 text-base font-light leading-[1.85] text-muted">
-          <p>
-            Je m&apos;appelle Moustapha Mbaye. Depuis Dakar, je construis des
-            applications web, SaaS et des sites vitrines pour des clients en France et des
-            projets qui répondent aux besoins réels de l&apos;Afrique de l&apos;Ouest.
-          </p>
-          <p>
-            Mon Master 2 en Data Science & Génie Logiciel à l&apos;Université de Bambey forge ma rigueur
-            technique. Ma pratique quotidienne sur des projets réels forge mes
-            compétences.
-          </p>
+          {aboutData.paragraphs.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
+
           <p>
             <strong className="text-text font-medium">
-              Mon offre principale pour la France :
+              {aboutData.offrefr.text}
             </strong>{" "}
-            sites vitrines performants pour hôtels et PME,
-            livrés rapidement avec une stack moderne et un SEO technique solide.
+            {aboutData.offrefr.description}
           </p>
+
+          {aboutData.problemes.text}
+          <ul className="list-disc list-inside">
+            {aboutData.problemes.list.map((problem,index) =>(
+              <li key={index}>{problem}</li>
+            ))}
+          </ul>
+          <p>{aboutData.problemes.resultat}</p>
         </div>
 
         {/* Stack pills */}
         <div className="flex flex-wrap gap-2 mt-8">
-          {stack.map((s) => (
+          {aboutData.stack.map((s) => (
             <span
               key={s}
               className="font-mono-custom text-[11px] font-medium px-3 py-1.5 rounded border border-border2 text-muted bg-surface transition-all duration-200 hover:border-accent hover:text-accent hover:bg-[rgba(232,201,122,0.05)] cursor-default"
@@ -83,20 +72,19 @@ export default function About() {
 
           {/* Dakar badge */}
           <div className="inline-flex items-center gap-2 text-xs font-medium text-sn bg-[rgba(0,176,79,0.1)] border border-[rgba(0,176,79,0.2)] px-3.5 py-1.5 rounded-full mb-5">
-            🇸🇳 Dakar, Sénégal
+            {aboutData.card.badge}
           </div>
 
           <h3 className="font-display text-xl font-bold tracking-tight text-text mb-4">
-            La meilleure tech n&apos;a pas de frontières.
+            {aboutData.card.title}
           </h3>
           <p className="text-sm font-light leading-relaxed text-muted mb-6">
-            Un hôtel à Lyon mérite le même niveau de soin qu&apos;une startup à
-            Dakar. Je le prouve à chaque projet.
+            {aboutData.card.subtitle}
           </p>
 
           {/* Metrics grid */}
           <div className="grid grid-cols-2 gap-px bg-border rounded-lg overflow-hidden">
-            {metrics.map((m) => (
+            {aboutData.card.metrics.map((m) => (
               <div key={m.label} className="bg-surface2 p-5 text-center">
                 <div className="font-display text-4xl font-black text-accent leading-none tracking-tight">
                   {m.num}

@@ -1,5 +1,6 @@
 "use client";
 
+import { heroData } from "@/lib/data";
 import { motion, Transition } from "framer-motion";
 import Link from "next/link";
 
@@ -33,7 +34,7 @@ export default function Hero() {
           className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.15em] uppercase text-accent mb-7"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-          Dakar 🇸🇳 · Disponible pour missions France · Premiers clients en cours
+          {heroData.tag}
         </motion.div>
 
         {/* Title */}
@@ -59,27 +60,26 @@ export default function Hero() {
           {...fadeUp(0.6)}
           className="text-lg font-light leading-relaxed text-muted max-w-xl mb-11"
         >
-          Je construis des sites vitrines professionnels pour
-          hôtels et PME françaises, et des produits tech pour
-          l&apos;Afrique de l&apos;Ouest. <br />
+          {heroData.subtitle.text}
+          <br />
           <strong className="text-text font-medium">
-            Tarifs transparents, livraison en 10-15 jours, maquette gratuite.
-          </strong>{" "}
+            {heroData.subtitle.span}
+          </strong>
         </motion.p>
 
         {/* Actions */}
         <motion.div {...fadeUp(0.8)} className="flex items-center gap-4">
           <Link
-            href="#projects"
+            href={heroData.cta.primary.href}
             className="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-bg bg-accent px-8 py-3.5 rounded no-underline transition-all duration-200 hover:bg-[#f0d98a] hover:-translate-y-0.5"
           >
-            Voir mes projets →
+            {heroData.cta.primary.label}
           </Link>
           <Link
-            href="#contact"
+            href={heroData.cta.secondary.href}
             className="text-sm font-normal tracking-wide text-muted border-b border-border-2 pb-0.5 no-underline transition-all duration-200 hover:text-text hover:border-text2"
           >
-            Me contacter
+            {heroData.cta.secondary.label}
           </Link>
         </motion.div>
       </div>
