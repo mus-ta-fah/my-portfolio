@@ -290,7 +290,7 @@ export const projectsData: {
             location: "🌍 Afrique de l'Ouest",
             desc: "SaaS de gestion pour micro-entrepreneurs africains. 39 endpoints REST (auth, ventes, clients, factures, devis, dashboard IA), génération PDF WeasyPrint, résumés IA GPT-4, intégration Mobile Money et WhatsApp Business. Modèle freemium en FCFA. Score : 89/100 d'avancement.",
             stack: "FastAPI · PostgreSQL · SQLAlchemy · Alembic · Next.js 15 · shadcn/ui · Celery · Redis",
-            href: "mailto:hello@mustafah.dev?subject=Démo Micro-Business Assistant",
+            href: "/beta-test",
             linkLabel: "Demander la démo →",
             status: "wip",
         },

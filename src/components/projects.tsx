@@ -1,42 +1,43 @@
 "use client";
 
+import { projectsData } from "@/lib/data";
 import { motion, Transition } from "framer-motion";
 import Link from "next/link";
 
-const projects = [
-  {
-    tags: [{ label: "Business actuel", highlight: true }, { label: "Next.js" }, { label: "Framer" }, { label: "France" }],
-    name: "Sites Vitrines Hôtels",
-    location: "🇫🇷 Lyon, Bordeaux, France",
-    desc: "Prospection B2B + création de sites vitrines professionnels pour hôtels indépendants français. Réservation directe intégrée, SEO technique. 194 prospects identifiés, pipeline actif.",
-    stack: "Next.js · Tailwind CSS · Framer · Google Maps API · Anthropic API",
-    href: "https://hotel-kyriad.netlify.app",
-  },
-  {
-    tags: [{ label: "IoT · Govathon 2025", highlight: true }, { label: "ESP8266" }, { label: "Next.js" }],
-    name: "Kaaraange",
-    location: "🇸🇳 Dakar, Sénégal",
-    desc: "Poubelle biomédicale connectée pour améliorer la gestion des déchets hospitaliers. Capteurs IoT, dashboard temps réel, auth sécurisée. Présenté à Govathon 2025.",
-    stack: "ESP8266 · Next.js 15 · Prisma · Neon PostgreSQL · Better Auth · Vercel",
-    href: "https://kaaraange.vercel.app",
-  },
-  {
-    tags: [{ label: "SaaS · Freemium", highlight: true }, { label: "FastAPI" }, { label: "Next.js" }],
-    name: "Micro-Business Assistant",
-    location: "🌍 Afrique de l'Ouest",
-    desc: "SaaS de gestion pour micro-entrepreneurs africains. 39 endpoints, génération PDF, résumés IA GPT-4, Mobile Money, WhatsApp Business. Freemium en FCFA.",
-    stack: "FastAPI · PostgreSQL · SQLAlchemy · Next.js 15 · shadcn/ui · Celery · Redis",
-    href: "#",
-  },
-  {
-    tags: [{ label: "Marketplace B2B", highlight: true }, { label: "FastAPI" }, { label: "Multi-tenant" }],
-    name: "SenMarché",
-    location: "🌍 Afrique de l'Ouest",
-    desc: "Marketplace B2B wholesale multi-tenant pour le commerce ouest-africain. RLS PostgreSQL, JWT rotation, WebSocket, CI/CD GitHub Actions.",
-    stack: "FastAPI · PostgreSQL RLS · Redis · Docker · GitHub Actions · WebSocket",
-    href: "#",
-  },
-];
+// const projects = [
+//   {
+//     tags: [{ label: "Business actuel", highlight: true }, { label: "Next.js" }, { label: "Framer" }, { label: "France" }],
+//     name: "Sites Vitrines Hôtels",
+//     location: "🇫🇷 Lyon, Bordeaux, France",
+//     desc: "Prospection B2B + création de sites vitrines professionnels pour hôtels indépendants français. Réservation directe intégrée, SEO technique. 194 prospects identifiés, pipeline actif.",
+//     stack: "Next.js · Tailwind CSS · Framer · Google Maps API · Anthropic API",
+//     href: "https://hotel-kyriad.netlify.app",
+//   },
+//   {
+//     tags: [{ label: "IoT · Govathon 2025", highlight: true }, { label: "ESP8266" }, { label: "Next.js" }],
+//     name: "Kaaraange",
+//     location: "🇸🇳 Dakar, Sénégal",
+//     desc: "Poubelle biomédicale connectée pour améliorer la gestion des déchets hospitaliers. Capteurs IoT, dashboard temps réel, auth sécurisée. Présenté à Govathon 2025.",
+//     stack: "ESP8266 · Next.js 15 · Prisma · Neon PostgreSQL · Better Auth · Vercel",
+//     href: "https://kaaraange.vercel.app",
+//   },
+//   {
+//     tags: [{ label: "SaaS · Freemium", highlight: true }, { label: "FastAPI" }, { label: "Next.js" }],
+//     name: "Micro-Business Assistant",
+//     location: "🌍 Afrique de l'Ouest",
+//     desc: "SaaS de gestion pour micro-entrepreneurs africains. 39 endpoints, génération PDF, résumés IA GPT-4, Mobile Money, WhatsApp Business. Freemium en FCFA.",
+//     stack: "FastAPI · PostgreSQL · SQLAlchemy · Next.js 15 · shadcn/ui · Celery · Redis",
+//     href: "#",
+//   },
+//   {
+//     tags: [{ label: "Marketplace B2B", highlight: true }, { label: "FastAPI" }, { label: "Multi-tenant" }],
+//     name: "SenMarché",
+//     location: "🌍 Afrique de l'Ouest",
+//     desc: "Marketplace B2B wholesale multi-tenant pour le commerce ouest-africain. RLS PostgreSQL, JWT rotation, WebSocket, CI/CD GitHub Actions.",
+//     stack: "FastAPI · PostgreSQL RLS · Redis · Docker · GitHub Actions · WebSocket",
+//     href: "#",
+//   },
+// ];
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 32 },
@@ -66,7 +67,7 @@ export default function Projects() {
         </motion.div>
         <motion.div {...fadeUp(0.1)}>
           <Link
-            href="https://github.com/mustafahmbaye"
+            href="https://github.com/mus-ta-fah"
             target="_blank"
             className="text-sm font-normal tracking-wide text-muted border-b border-border2 pb-0.5 no-underline transition-all duration-200 hover:text-text hover:border-text2"
           >
@@ -77,7 +78,7 @@ export default function Projects() {
 
       {/* Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border rounded-xl overflow-hidden">
-        {projects.map((p, i) => (
+        {projectsData.items.map((p, i) => (
           <motion.a
             key={p.name}
             href={p.href}
