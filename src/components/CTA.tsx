@@ -46,7 +46,7 @@ export default function CTA() {
               className="text-lg font-light text-muted max-w-md mb-6 leading-relaxed"
             >
               {ctaData.subtitle.map((text, index) => (
-                <div key={index}>{text}</div>
+                <span key={index}>{text}</span>
               ))}
             </motion.p>
             <div className="mt-12">
