@@ -1,44 +1,36 @@
-import { MetadataRoute } from "next";
-
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://mustafah.dev";
+import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: BASE_URL,
+      url: 'https://mustafah.dev',
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: 'monthly',
       priority: 1,
     },
     {
-      url: `${BASE_URL}/#problem`,
+      url: 'https://mustafah.dev/#problem',
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${BASE_URL}/#services`,
+      url: 'https://mustafah.dev/#services',
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: `${BASE_URL}/#projects`,
+      url: 'https://mustafah.dev/#projects',
       lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/#process`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${BASE_URL}/#contact`,
+      url: 'https://mustafah.dev/#contact',
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: 'monthly',
       priority: 0.9,
     },
-  ];
+  ]
 }
