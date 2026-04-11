@@ -23,7 +23,7 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Moustapha Mbaye — Site hôtel & réservation directe",
+  title: "Moustapha Mbaye — Création site hôtel & réservation directe · Dakar",
   description:
     "Développeur web basé à Dakar. Je crée des sites de réservation directe pour hôtels indépendants français — livré en 15 jours, 3x moins cher qu'une agence parisienne. Maquette gratuite.",
   metadataBase: new URL("https://mustafah.dev"),
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     canonical: "https://mustafah.dev",
   },
   openGraph: {
-    title: "Moustapha Mbaye — Site de réservation directe pour votre hôtel",
+    title: "Moustapha Mbaye — Site hôtel & réservation directe",
     description: "Arrêtez de payer 15% à Booking. Un site professionnel livré en 15 jours depuis Dakar, à une fraction du tarif d'une agence parisienne.",
     url: "https://mustafah.dev",
     siteName: "mustafah.dev",
