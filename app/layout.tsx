@@ -23,7 +23,7 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Moustapha Mbaye — Création site hôtel & réservation directe · Dakar",
+  title: "Moustapha Mbaye — Site hôtel & réservation directe",
   description:
     "Développeur web basé à Dakar. Je crée des sites de réservation directe pour hôtels indépendants français — livré en 15 jours, 3x moins cher qu'une agence parisienne. Maquette gratuite.",
   metadataBase: new URL("https://mustafah.dev"),
