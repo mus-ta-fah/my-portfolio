@@ -23,22 +23,22 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Moustapha Mbaye — Développeur Fullstack · Dakar",
+  title: "Moustapha Mbaye — Sites de réservation directe pour hôtels indépendants",
   description:
-    "Développeur fullstack web & mobile basé à Dakar. Sites vitrines professionnels pour PME françaises. Next.js, FastAPI, React Native.",
-  metadataBase: new URL("https://www.mustafah.dev"),
+    "Développeur fullstack basé à Dakar. Sites de réservation directe pour hôtels français — livré en 15 jours, 3x moins cher qu'une agence parisienne.",
+  metadataBase: new URL("https://mustafah.dev"),
   openGraph: {
-    title: "Moustapha Mbaye — Développeur Fullstack",
-    description: "Je construis depuis Dakar ce que les agences parisiennes facturent 3x plus cher.",
-    url: "https://www.mustafah.dev",
+    title: "Moustapha Mbaye — Sites de réservation directe pour hôtels indépendants",
+    description: "Développeur fullstack basé à Dakar. Sites de réservation directe pour hôtels français — livré en 15 jours, 3x moins cher qu'une agence parisienne.",
+    url: "https://mustafah.dev",
     siteName: "mustafah.dev",
     locale: "fr_FR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Moustapha Mbaye — Développeur Fullstack",
-    description: "Fullstack dev basé à Dakar · Sites vitrines PME françaises",
+    title: "Moustapha Mbaye — Sites de réservation directe pour hôtels indépendants",
+    description: "Sites de réservation directe pour hôtels français · Livré en 15 jours · Basé à Dakar",
   },
   robots: { index: true, follow: true },
 };
