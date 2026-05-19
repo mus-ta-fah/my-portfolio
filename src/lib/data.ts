@@ -1,5 +1,5 @@
-import type { LucideIcon } from 'lucide-react';
-import { AppWindow, Hotel, Smartphone } from 'lucide-react';
+import type { LucideIcon } from "lucide-react";
+import { AppWindow, Hotel, Smartphone } from "lucide-react";
 
 // ─────────────────────────────────────────────────────────────
 // SITE CONFIG
@@ -68,7 +68,8 @@ export const problemData = {
     line1: "Booking travaille",
     line2Accent: "contre vous.",
   },
-  intro: "Chaque réservation via Booking ou Expedia vous coûte entre 15% et 25% de commission. Sur une année, pour un hôtel de 20 chambres à 70€ la nuit, ça représente :",
+  intro:
+    "Chaque réservation via Booking ou Expedia vous coûte entre 15% et 25% de commission. Sur une année, pour un hôtel de 20 chambres à 70€ la nuit, ça représente :",
   calcul: {
     rooms: 20,
     price: 70,
@@ -117,7 +118,8 @@ export const aboutData = {
   ],
   offrefr: {
     text: "Mon offre concrète :",
-    description: "un site de réservation directe ou une vitrine professionnelle, livré en 15 jours, pour 1 500 à 2 500€ — soit 3 à 5 fois moins qu'une agence parisienne pour un résultat équivalent.",
+    description:
+      "un site de réservation directe ou une vitrine professionnelle, livré en 15 jours, pour 1 500 à 2 500€ — soit 3 à 5 fois moins qu'une agence parisienne pour un résultat équivalent.",
   },
   argument: {
     text: "La distance n'est pas un problème.",
@@ -270,10 +272,27 @@ export const projectsData: {
     line2: "j'ai",
     line2Accent: "construit.",
   },
-  pmeNote: "Vous n'êtes pas hôtelier ? Même approche, même rigueur — restaurant, cabinet, artisan, commerce. Parlez-moi de votre projet.",
+  pmeNote:
+    "Vous n'êtes pas hôtelier ? Même approche, même rigueur — restaurant, cabinet, artisan, commerce. Parlez-moi de votre projet.",
   items: [
     {
       featured: true,
+      tags: [
+        { label: "Domaine · Live", highlight: true },
+        { label: "Next.js", highlight: false },
+        { label: "Tailwind", highlight: false },
+        { label: "France", highlight: false },
+      ],
+      name: "Les Communs du Manoir",
+      location: "🇫🇷 France",
+      desc: "Site vitrine haut de gamme pour domaine & hébergement prestige. Identité visuelle soignée, expérience immersive, galerie premium. Le niveau que mérite un établissement d'exception.",
+      stack: "Next.js · Tailwind CSS · Framer Motion · Vercel",
+      href: "https://lescommunsdumanoir.vercel.app/", // ← remplace par l'URL réelle
+      linkLabel: "Voir la démo →",
+      status: "live",
+    },
+    {
+      featured: false,
       tags: [
         { label: "Hôtel de Charme · Live", highlight: true },
         { label: "Next.js", highlight: false },
@@ -307,31 +326,61 @@ export const projectsData: {
     {
       featured: true,
       tags: [
-        { label: "Domaine · Live", highlight: true },
+        { label: "Hôtel · Live", highlight: true },
         { label: "Next.js", highlight: false },
-        { label: "Tailwind", highlight: false },
-        { label: "France", highlight: false },
+        { label: "Sénégal", highlight: false },
       ],
-      name: "Les Communs du Manoir",
-      location: "🇫🇷 France",
-      desc: "Site vitrine haut de gamme pour domaine & hébergement prestige. Identité visuelle soignée, expérience immersive, galerie premium. Le niveau que mérite un établissement d'exception.",
+      name: "Hôtel Augustin Ly",
+      location: "🇸🇳 Dakar — Sénégal",
+      desc: "Site vitrine professionnel pour hôtel indépendant. Design soigné, réservation directe, SEO optimisé, mobile-first. Un exemple concret de ce que votre établissement peut avoir en 15 jours.",
       stack: "Next.js · Tailwind CSS · Framer Motion · Vercel",
-      href: "https://lescommunsdumanoir.vercel.app/", // ← remplace par l'URL réelle
+      href: "https://hotel-augustin-ly.vercel.app",
+      linkLabel: "Voir la démo →",
+      status: "live",
+    },
+
+    {
+      featured: false,
+      tags: [
+        { label: "Appart'hôtel · Live", highlight: true },
+        { label: "Next.js", highlight: false },
+        { label: "Sénégal", highlight: false },
+      ],
+      name: "Waypoint Suites",
+      location: "🇸🇳 Dakar — Sénégal",
+      desc: "Site vitrine pour résidence de standing ★★★ à Mermoz. WiFi fibre 9.8/10, 2 salles de réunion, segment B2B — une présence digitale taillée pour capter la clientèle affaires et les séjours longue durée.",
+      stack: "Next.js · Tailwind CSS · Framer Motion · Vercel",
+      href: "https://waypoint-suites.vercel.app/", // ← URL à compléter
       linkLabel: "Voir la démo →",
       status: "live",
     },
     {
       featured: false,
       tags: [
-        { label: "Démo Vitrine · Kyriad", highlight: true },
+        { label: "Maison d'hôtes · Live", highlight: true },
+        { label: "Next.js", highlight: false },
+        { label: "Sénégal", highlight: false },
+      ],
+      name: "Union Amicale Corse Dakar",
+      location: "🇸🇳 Dakar — Corniche",
+      desc: "476 avis Booking, piscine qui se confond avec l'Atlantique, plage privée 600m — et zéro présence digitale. Un site immersif pour enfin exploiter un argument visuel d'exception.",
+      stack: "Next.js · Tailwind CSS · Framer Motion · Vercel",
+      href: "https://amicale-corse-dakar.vercel.app/", // ← URL à compléter
+      linkLabel: "Voir la démo →",
+      status: "live",
+    },
+    {
+      featured: false,
+      tags: [
+        { label: "Hôtel · Live", highlight: true },
         { label: "Next.js", highlight: false },
         { label: "France", highlight: false },
       ],
-      name: "Démo Vitrine Hôtel",
+      name: "Hôtel de Verdun",
       location: "🇫🇷 France",
-      desc: "Démo de référence : ce que votre hôtel peut avoir en 15 jours. Page d'accueil impactante, galerie, réservation directe, SEO optimisé, mobile-first.",
+      desc: "Site de réservation directe pour hôtel indépendant français. Design soigné, SEO local optimisé, mobile-first.",
       stack: "Next.js · Tailwind CSS · Framer Motion · Vercel",
-      href: "https://hotel-vitrine-kyriad-demo.netlify.app",
+      href: "https://hoteldeverdun.vercel.app",
       linkLabel: "Voir la démo →",
       status: "live",
     },
@@ -429,10 +478,31 @@ export const ctaData = {
     "Décrivez-moi votre situation en 2 lignes. Je reviens avec une maquette et un chiffrage sous 24h — sans engagement.",
   form: {
     fields: [
-      { name: "name", label: "Votre nom", placeholder: "Jean Martin", type: "text" },
-      { name: "email", label: "Email professionnel", placeholder: "contact@hotel-xyz.fr", type: "email" },
-      { name: "etablissement", label: "Votre établissement", placeholder: "Hôtel des Alpes, Lyon", type: "text" },
-      { name: "message", label: "Votre situation en 2 lignes", placeholder: "J'ai un hôtel de 25 chambres, mon site date de 2016, je passe 70% de mes réservations par Booking...", type: "textarea" },
+      {
+        name: "name",
+        label: "Votre nom",
+        placeholder: "Jean Martin",
+        type: "text",
+      },
+      {
+        name: "email",
+        label: "Email professionnel",
+        placeholder: "contact@hotel-xyz.fr",
+        type: "email",
+      },
+      {
+        name: "etablissement",
+        label: "Votre établissement",
+        placeholder: "Hôtel des Alpes, Lyon",
+        type: "text",
+      },
+      {
+        name: "message",
+        label: "Votre situation en 2 lignes",
+        placeholder:
+          "J'ai un hôtel de 25 chambres, mon site date de 2016, je passe 70% de mes réservations par Booking...",
+        type: "textarea",
+      },
     ],
     submit: "Recevoir ma maquette gratuite →",
     note: "Réponse sous 24h · Maquette gratuite · Aucun engagement",
@@ -459,7 +529,11 @@ export const footerData = {
   logo: { text: "mustafah", accent: ".", tld: "dev" },
   links: [
     { label: "GitHub", href: "https://github.com/mus-ta-fah", external: true },
-    { label: "LinkedIn", href: "https://linkedin.com/in/mustafah-mbaye", external: true },
+    {
+      label: "LinkedIn",
+      href: "https://linkedin.com/in/mustafah-mbaye",
+      external: true,
+    },
     { label: "Email", href: "mailto:hello@mustafah.dev", external: false },
   ],
   copy: "© 2026 Moustapha Mbaye · Dakar 🇸🇳",
