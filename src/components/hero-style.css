@@ -1,0 +1,160 @@
+/* Hero Section Specific Styles */
+
+/* Gradient Text */
+.gradient-text {
+    background: linear-gradient(
+      135deg, 
+      #00A651 0%,    /* Green origin */
+      #00897B 25%,   /* Teal transition */
+      #0984E3 50%,   /* Blue tech */
+      #1A237E 75%,   /* Navy transition */
+      #7C3AED 100%   /* Purple innovation */
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 200% auto;
+    animation: gradient-shift 8s ease-in-out infinite;
+  }
+  
+  @keyframes gradient-shift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  /* Grid Background */
+  .grid-background {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-image: 
+      linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+  }
+  
+  /* Cursor Glow Effect (Optional) */
+  .cursor-glow {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(
+      circle, 
+      rgba(0, 200, 150, 0.15) 0%, 
+      transparent 70%
+    );
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+  
+  /* Responsive Typography */
+  @media (max-width: 640px) {
+    .hero-title {
+      font-size: 2.5rem;
+      line-height: 1.1;
+    }
+    
+    .hero-description {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Smooth Scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Glassmorphism Utilities */
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .glass-hover:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Animation Utilities */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  @keyframes pulse-slow {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+  
+  /* Animated Gradient Border — CTA principal */
+  @property --cta-angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+  }
+
+  .cta-gradient-border {
+    position: relative;
+    padding: 2px;
+    border-radius: 0.75rem;
+    background: conic-gradient(
+      from var(--cta-angle),
+      #00A651,
+      #0984E3,
+      #7C3AED,
+      #6dd5ed,
+      #00A651
+    );
+    animation: cta-border-rotate 3s linear infinite;
+  }
+
+  @keyframes cta-border-rotate {
+    to {
+      --cta-angle: 360deg;
+    }
+  }
+
+  /* Prefers Reduced Motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+
+    .gradient-text {
+      animation: none;
+    }
+
+    .cta-gradient-border {
+      animation: none;
+      background: linear-gradient(135deg, #00A651, #0984E3, #7C3AED);
+    }
+  }
